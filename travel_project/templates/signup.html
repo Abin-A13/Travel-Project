@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp form</title>
+</head>
+<body style="background: blueviolet;" >
+    <form action="register" method="POST"  >
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Enter the username" style="margin-left: 550px;width: 260px;height: 27px;border-radius: 11px;border-color: beige;padding-left: 8px;margin-bottom: 7px;" ><br>
+        <input type="text" name="frist_name" placeholder="Enter the first name" style="margin-left: 550px;width: 260px;height: 27px;border-radius: 11px;border-color: beige;padding-left: 8px;margin-bottom: 7px;"><br>
+        <input type="text" name="last_name" placeholder="Enter the last name" style="margin-left: 550px;width: 260px;height: 27px;border-radius: 11px;border-color: beige;padding-left: 8px;margin-bottom: 7px;" ><br>
+        <input type="email" name="mail" placeholder="Enter the email Address" style="margin-left: 550px;width: 260px;height: 27px;border-radius: 11px;border-color: beige;padding-left: 8px;margin-bottom: 7px;"><br>
+        <input type="password" name="password1" placeholder="Enter the password" style="margin-left: 550px;width: 260px;height: 27px;border-radius: 11px;border-color: beige;padding-left: 8px;margin-bottom: 7px;"><br>
+        <input type="password" name="password2" placeholder="Confirm your password" style="margin-left: 550px;width: 260px;height: 27px;border-radius: 11px;border-color: beige;padding-left: 8px;margin-bottom: 7px;"><br>
+        <input type="submit" value="Submit" style="margin-left: 653px;height: 31px;width: 81px; border-radius: 11px;">
+        
+    </form>
+{% for msg in messages %}
+<h2 style="margin-left: 296px;margin-top: -260px;">{{msg}}</h2>
+{% endfor %}
+</body>
+</html>
